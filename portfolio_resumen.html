@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumen de Proyectos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #7dd3fc;
+            --border: #334155;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--border);
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+            margin-top: 30px;
+            color: var(--text-primary);
+        }
+
+        h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.2rem;
+            color: var(--accent);
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        p,
+        li {
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .project-card {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            background: rgba(15, 23, 42, 0.5);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent);
+            transform: scale(1.005);
+            cursor: pointer;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: var(--border);
+            margin: 30px 0;
+        }
+
+        /* Mobile Responsiveness - Ultra Compact */
+        @media only screen and (max-width: 600px) {
+            body {
+                padding: 5px;
+            }
+
+            .container {
+                padding: 15px;
+                border-radius: 12px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
+
+            hr {
+                margin: 15px 0;
+            }
+
+            .project-card {
+                padding: 12px;
+                margin-bottom: 12px;
+            }
+
+            .project-card h3 {
+                font-size: 1rem;
+                margin-bottom: 4px;
+            }
+
+            .project-card p {
+                font-size: 0.85rem;
+                margin: 4px 0 8px 0;
+                line-height: 1.3;
+            }
+
+            .project-card ul {
+                padding-left: 15px;
+                margin-top: 0;
+            }
+
+            .project-card li {
+                font-size: 0.85rem;
+                margin-bottom: 4px;
+                line-height: 1.25;
+            }
+
+            .container>p {
+                font-size: 0.9rem;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Resumen de Proyectos Críticos</h1>
+        <p style="text-align: center;">Resumen ejecutivo de soluciones implementadas para optimización operativa y
+            financiera.</p>
+        <hr>
+
+        <a href="https://itkv.portalgmpy.com/#/haastenDescargas" target="_blank" class="project-card">
+            <h3>1. Gestión Ganadera y Módulo Logístico (HAASTEN) ITKV</h3>
+            <p>Control de activos, trazabilidad y logística de cargas de parcelas.</p>
+            <ul>
+                <li><strong>Tablero de Control:</strong> Visualización en tiempo real para decisiones gerenciales sobre
+                    stock, ventas, mortalidad y autoconsumo.</li>
+                <li><strong>Procesamiento Masivo:</strong> Motor de carga rápida que reduce el trabajo manual mediante
+                    importación de plantillas excel.</li>
+                <li><strong>Eficiencia Operativa:</strong> Sistema de verificación rápida y filtros para grandes flujos
+                    de datos.</li>
+            </ul>
+        </a>
+
+        <a href="http://192.168.55.140:8080/itkv" target="_blank" class="project-card">
+            <h3>2. Control de Inventario de Bidones (ITKV)</h3>
+            <p>Trazabilidad de insumos y sincronización logística.</p>
+            <ul>
+                <li><strong>Auditoría:</strong> Informes dinámicos exportables (Excel, PDF) para control gerencial.</li>
+                <li><strong>Integración Industrial:</strong> Uso de lectores de código de barras para eliminar errores
+                    humanos en planta y comprobantes de salida mediante la impresión de tickets.</li>
+                <li><strong>Modo Sin Conexión:</strong> Sincronización automática de datos ante fallos de internet.</li>
+                <li><strong>Integración con SAP:</strong> Sincronización automática de datos con SAP.</li>
+            </ul>
+        </a>
+
+        <a href="http://192.168.55.140:8080/itkv" target="_blank" class="project-card">
+            <h3>3. Registro de Lluvia (ITKV)</h3>
+            <p>Datos climáticos históricos para planificación agrícola.</p>
+            <ul>
+                <li><strong>Resiliencia:</strong> Registro de datos garantizado incluso en zonas sin señal.</li>
+                <li><strong>Análisis Climático:</strong> Reportes visuales de tendencias de lluvia y sequía.</li>
+                <li><strong>Carga Rápida:</strong> Interfaz ágil tipo planilla excel para ingreso veloz de datos desde
+                    el campo.</li>
+            </ul>
+        </a>
+
+        <a href="http://192.168.125.118:8086/Yemsys" target="_blank" class="project-card">
+            <h3>4. Control Ambiental (Temperatura y Humedad) - GRANJA/VIMAR</h3>
+            <p>Monitoreo en tiempo real de activos críticos industriales.</p>
+            <ul>
+                <li><strong>Alertas Inmediatas:</strong> Avisos visuales y sonoros ante anomalías en silos y cámaras.
+                </li>
+                <li><strong>Continuidad de Datos:</strong> Historial coherente al transferir sensores entre ubicaciones.
+                </li>
+                <li><strong>Auditoría de Calidad:</strong> Reportes automáticos de desvíos y promedios para
+                    certificación.</li>
+            </ul>
+        </a>
+
+        <a href="http://192.168.125.118:8086/Yemsys" target="_blank" class="project-card">
+            <h3>5. Registros Diarios de Gestión Avícola - GRANJA</h3>
+            <p>Centralización del control biológico y productivo con lógica de negocio avanzada.</p>
+            <ul>
+                <li><strong>Conexión Automática:</strong> Carga directa de datos desde máquinas clasificadoras (ORION).
+                </li>
+                <li><strong>Recálculo en Cascada:</strong> Motor inteligente que actualiza automáticamente proyecciones
+                    futuras al corregir un registro histórico.</li>
+                <li><strong>Validación Robusta:</strong> Reglas de negocio forzadas a nivel de base de datos para
+                    impedir inconsistencias biológicas críticas.</li>
+                <li><strong>Tablero Unificado:</strong> Consolidación de todos los indicadores vitales (Mortalidad,
+                    Producción, Alimento, Agua, Temperatura) en una sola vista operativa.</li>
+            </ul>
+        </a>
+
+        <a href="http://192.168.125.118:8086/Yemsys" target="_blank" class="project-card">
+            <h3>6. Proyección y Escenarios Estratégicos - GRANJA</h3>
+            <p>Inteligencia de negocios para maximizar rentabilidad.</p>
+            <ul>
+                <li><strong>Vista Directiva:</strong> Tablero unificado para decisiones de inversión y ventas.</li>
+                <li><strong>Gestión de Lotes:</strong> Control detallado de saldos y planificación de ventas.</li>
+                <li><strong>Simulación:</strong> Creación de escenarios futuros ("Qué pasaría si...") para optimizar la
+                    producción.</li>
+            </ul>
+        </a>
+
+        <a href="http://192.168.125.118:8086/Yemsys" target="_blank" class="project-card">
+            <h3>7. Gestión de Fases de Recría - GRANJA</h3>
+            <p>Trazabilidad total desde el nacimiento del animal.</p>
+            <ul>
+                <li><strong>Ciclo Completo:</strong> Digitalización de datos desde las primeras semanas de vida.</li>
+                <li><strong>Control de Etapas:</strong> Gestión de periodos de vacío sanitario y traslados.</li>
+                <li><strong>Unificación:</strong> Misma lógica y robustez que el sistema de Gestión Avícola principal.
+                </li>
+            </ul>
+        </a>
+
+        <a href="http://192.168.125.118:8086/Yemsys" target="_blank" class="project-card">
+            <h3>8. Pedido Balanceados - GRANJA</h3>
+            <p>Optimización logística y solicitud ágil de insumos con interfaz de alto rendimiento.</p>
+            <ul>
+                <li><strong>Interfaz Tipo Excel:</strong> Diseño de grilla con datos precargados para carga veloz.
+                    Edición directa con guardado automático de cantidades y observaciones.</li>
+                <li><strong>Control Visual y Prioridades:</strong> Identificación por colores de tipos de balanceados
+                    principales y gestión de prioridades (Alta/Media/Baja) para evitar errores involuntarios.</li>
+                <li><strong>Seguridad e Inmutabilidad:</strong> Sistema de Doble Control con bloqueo definitivo de
+                    edición tras la confirmación y registro auditable por usuario.</li>
+            </ul>
+        </a>
+
+        <a href="http://192.168.125.118:8086/Yemsys" target="_blank" class="project-card">
+            <h3>9. Stock Balanceados - GRANJA</h3>
+            <p>Control de inventario diario y cálculo de autonomía en aviarios activos.</p>
+            <ul>
+                <li><strong>Logística Diaria:</strong> Registro de stock por silo y consumo diario para calcular
+                    prioridades de reabastecimiento en tiempo real.</li>
+                <li><strong>Seguridad e Inmutabilidad:</strong> Trazabilidad por usuario en cada cambio y bloqueo
+                    definitivo de registros tras la confirmación (Doble Control).</li>
+                <li><strong>Gestión Visual Intuitiva:</strong> Identificación rápida de balanceados recurrentes mediante
+                    códigos de colores y alertas de stock.</li>
+            </ul>
+        </a>
+
+        <a href="http://192.168.125.118:8086/Yemsys" target="_blank" class="project-card">
+            <h3>10. Bloqueo y Asignación de Ventas - VIMAR</h3>
+            <p>Control comercial estratégico y asignación de cupos.</p>
+            <ul>
+                <li><strong>Alta Velocidad:</strong> Diseño optimizado para uso rápido con teclado (sin ratón).</li>
+                <li><strong>Asignación Inteligente:</strong> Visualización de stock en salón y depósito al definir
+                    cupos.</li>
+                <li><strong>Transparencia:</strong> Registro histórico detallado de quién modificó cada cupo y cuándo.
+                </li>
+            </ul>
+        </a>
+    </div>
+</body>
+
+</html>
